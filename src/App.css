@@ -3,9 +3,9 @@ div {
 }
 
 .App {
-  align-items: center;
   background: url('/susan-yin-647448-unsplash.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   margin: 0;
+  min-height: 100vh;
 }

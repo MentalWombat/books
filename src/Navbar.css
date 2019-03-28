@@ -10,6 +10,10 @@
 }
 
 .btn-add {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
   font-size: 42px;
   margin: 0;
 }

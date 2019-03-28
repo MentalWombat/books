@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import './Navbar.css';
 
 class Navbar extends Component {
-	render() {
+  render() {
 		return(
       <div className="navbar">
         <h1>Books</h1>
-        <button className="btn-add">+</button>
+        <button
+          className="btn-add"
+          onClick={this.props.onAddBook}
+        >
+          +
+        </button>
       </div>
 		);
 	}

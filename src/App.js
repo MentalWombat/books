@@ -59,7 +59,7 @@ class App extends Component {
         }
       ],
       nextBookId: 6,
-      showForm: false
+      showForm: false,
     }
     this.handleSave = this.handleSave.bind(this);
   }
@@ -69,7 +69,8 @@ class App extends Component {
       const newBook = {...book, id: this.state.nextBookId};
       return {
         nextBookId: prevState.nextBookId + 1,
-        books: [...this.state.books, newBook]
+        books: [...this.state.books, newBook],
+        showForm: false
       }
     });
   }
@@ -78,8 +79,13 @@ class App extends Component {
     const {showForm} = this.state;
     return (
       <div className="App">
-        <Navbar />
-        { showForm ? <NewBookForm onSave={this.handleSave} /> : null }
+        <Navbar onAddBook={() => this.setState({showForm: true})} />
+        { showForm ?
+          <NewBookForm
+            onSave={this.handleSave}
+            onClose={() => this.setState({showForm: false})}
+          /> :
+          null }
         <Books books={this.state.books}/>
       </div>
     );

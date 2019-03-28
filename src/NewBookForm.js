@@ -40,7 +40,7 @@ class NewBookForm extends Component {
           <button
             className="close-btn"
             type="button"
-            onClick={()=>{}}
+            onClick={this.props.onClose}
           >
             X
           </button>

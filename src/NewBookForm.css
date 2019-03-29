@@ -14,17 +14,8 @@
   position: relative;
 }
 
-.close-btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
 .inputs {
-  margin: 40px 60px 20px 60px;
+  margin: 20px 60px;
 }
 
 .input {

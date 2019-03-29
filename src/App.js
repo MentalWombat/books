@@ -62,6 +62,7 @@ class App extends Component {
       showForm: false,
     }
     this.handleSave = this.handleSave.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleSave(book) {
@@ -75,15 +76,18 @@ class App extends Component {
     });
   }
 
+  handleClick() {
+    this.setState(prev => ({ showForm: !prev.showForm }))
+  }
+
   render() {
     const {showForm} = this.state;
     return (
       <div className="App">
-        <Navbar onAddBook={() => this.setState({showForm: true})} />
+        <Navbar handleClick={this.handleClick} toggleBtn={this.state.showForm}/>
         { showForm ?
           <NewBookForm
             onSave={this.handleSave}
-            onClose={() => this.setState({showForm: false})}
           /> :
           null }
         <Books books={this.state.books}/>

@@ -9,11 +9,25 @@
   width: 100%;
 }
 
-.btn-add {
+.btn {
   background-color: transparent;
   border: none;
   color: #fff;
   cursor: pointer;
   font-size: 42px;
   margin: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-add {
+  transform: rotate(0);
+  transition: transform 200ms;
+}
+
+.btn-close {
+  transform: rotate(45deg);
+  transition: transform 200ms;
 }

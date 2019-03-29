@@ -37,13 +37,6 @@ class NewBookForm extends Component {
 		return (
       <div className="book-form-container">
   			<form className="book-form" onSubmit={this.handleSubmit}>
-          <button
-            className="close-btn"
-            type="button"
-            onClick={this.props.onClose}
-          >
-            X
-          </button>
           <div className="inputs">
             <div className="input">
               <label htmlFor="book-title-input">Title: </label>

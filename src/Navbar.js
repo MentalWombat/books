@@ -7,8 +7,8 @@ class Navbar extends Component {
       <div className="navbar">
         <h1>Books</h1>
         <button
-          className="btn-add"
-          onClick={this.props.onAddBook}
+          className={`btn ${this.props.toggleBtn ? "btn-close" : "btn-add"}`}
+          onClick={this.props.handleClick}
         >
           +
         </button>

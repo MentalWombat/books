@@ -7,3 +7,14 @@
   padding: 20px;
   width: 320px;
 }
+
+.book-btn-delete {
+	background-color: rgba(252, 189, 88, .7);
+  border: 2px solid #221f0f;
+  cursor: pointer;
+}
+
+.book-btn-delete:hover {
+  background-color: #221f0f;
+  color: rgb(252, 189, 88);
+}

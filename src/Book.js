@@ -9,6 +9,7 @@ const Book = (props) => {
       <p>{props.imprint}</p>
       <p>{props.pDate}</p>
       <p>{props.isbn}</p>
+      <button className="book-btn-delete" onClick={() => props.onDelete(props.id)}>Delete</button>
 		</div>
 	);
 }

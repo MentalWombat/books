@@ -63,6 +63,7 @@ class App extends Component {
     }
     this.handleSave = this.handleSave.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleSave(book) {
@@ -80,6 +81,11 @@ class App extends Component {
     this.setState(prev => ({ showForm: !prev.showForm }))
   }
 
+  handleDelete(id) {
+    const books = this.state.books.filter(b => b.id !== id);
+    this.setState({books});
+  }
+
   render() {
     const {showForm} = this.state;
     return (
@@ -90,7 +96,7 @@ class App extends Component {
             onSave={this.handleSave}
           /> :
           null }
-        <Books books={this.state.books}/>
+        <Books books={this.state.books} onDelete={this.handleDelete}/>
       </div>
     );
   }
